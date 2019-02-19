@@ -259,7 +259,7 @@ def test_inventory_update_injected_content(this_kind, script_or_plugin, inventor
             if not os.path.exists(source_dir):
                 raise FileNotFoundError(
                     'Maybe you never made reference files? '
-                    'MAKE_INVENTORY_REFERENCE_FILES=true py.test ...\noriginal: {}'.format(e))
+                    'MAKE_INVENTORY_REFERENCE_FILES=true py.test ...\noriginal: {}')
             files_dir = os.path.join(source_dir, 'files')
             try:
                 expected_file_list = os.listdir(files_dir)

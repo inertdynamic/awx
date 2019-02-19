@@ -220,7 +220,7 @@ class TestInventorySourceInjectors:
             name='foo', source='custom', source_project=project
         )
         inventory_source.credentials.add(credential)
-        assert inventory_source.get_cloud_credential() == None
+        assert inventory_source.get_cloud_credential() is None
         assert inventory_source.get_extra_credentials() == [credential]
 
         inventory_source.source = 'ec2'
